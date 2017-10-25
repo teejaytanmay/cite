@@ -1,0 +1,270 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<style>
+body{
+  margin:0;
+  padding:0;
+  color:#666;
+  background:#888;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:20px;
+  }
+h2,h3{
+  color:#888;
+  font-weight:bold;
+  text-align:center;
+  text-transform:uppercase;
+}
+a{
+  color:#722872;
+}
+a:hover,a:focus{color:#910f8f;
+}
+#banner .container,
+main header,
+#portfolio .grid,
+#resume.grid,
+#contact>div,
+footer #footer-above{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-flow:row wrap;
+      flex-flow:row wrap;
+  -ms-flex-pack:distribute;
+      justify-content:space-around;
+  -webkit-box-align:start;
+      -ms-flex-align:start;
+          align-items:flex-start;
+  margin:0 auto;
+}
+#banner{
+  background-color:#722872 !important;
+  height:80px;
+  box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-color:#592059;
+}
+#banner .container{width:95%;max-width:1024px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;
+}
+#banner .container::before, #banner .container::after{display:none
+}
+#banner img{height:50px;margin:15px 0;
+}
+nav{
+  font-size:13px;
+  background:#722872;
+  -webkit-transition:all .3s;
+  transition:all .3s;
+}
+@media(max-width:768px){
+  nav{padding:5px;text-align:center;margin:0 auto;width:120%;
+  }
+  nav .active a{color:#722872;background:#bbb;box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+.nav>li{height:100%;text-transform:uppercase;font-weight:bold;letter-spacing:2px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;
+}
+.nav>li a{color:#ffffff;padding:10px 20px;
+}
+.nav>li a:hover{color:#722872;background:#bbb;box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.navbar-toggle{margin-right:0;
+}
+#top{
+  height:80px;
+  display:block;
+}
+main >*:not(.scroll-top){max-width:1024px;margin:0 auto;box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+main header{background:#aaa;color:#fff;text-align:right;padding:70px 10% 50px;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-ms-flex-line-pack:distribute;align-content:space-around;
+}
+@media(min-width:1023px){
+  main header{padding:50px 30px;
+  }
+}
+main header img{border-radius:50%;margin:30px 0 10px;max-width:80%;height:auto;width:250px;
+}
+main header .intro-text{max-width:675px;text-align:center;margin-bottom:30px;
+}
+@media(min-width:1023px){
+  main header .intro-text{text-align:right;width:610px;
+  }
+}
+main header .intro-text .skills{font-size:1.15em;
+}
+main section{background:#eee;padding:40px 0;
+}
+main section#contact>div{margin:0px auto;
+}
+main section#contact>div>div{width:80%;
+}
+main section#contact>div>div p{margin:60px auto 0;max-width:700px;
+}
+@media(min-width:1023px){
+  main section#contact>div>div {max-width:38%;
+  }
+  main section#contact>div>div p{margin-top:35px;
+  }
+  main section#contact>div>div p:last-child{margin-top:270px;
+  }
+}
+#portfolio .grid{padding:0;max-width:90%;list-style:none;margin-top:20px;
+}
+#portfolio .grid li{margin:20px;max-width:600px;
+}
+@media(min-width:1023px){
+  #portfolio.grid li{max-width:420px;
+  }
+}
+#resume.grid{padding:0;max-width:90%;list-style:none;margin-top:20px;
+}
+#resume {background:#aaa}
+#resume .grid li{margin:20px;max-width:800px;
+}
+}
+form{
+  width:80%;}
+@media(min-width:1023px){
+  form{width:40%;margin-left:20px;
+  }
+}
+form{
+  width:70%;
+}
+@media(min-width:1023px){
+  form{width:40%;margin-left:20px;
+  }
+}
+form .row:first-child .form-item{border-top:1px solid #fff;
+}
+.form-item{position:relative;margin-bottom:1px;padding-bottom:1px;border-bottom:1px solid #bbb;
+}
+.form-item input, .form-item textarea{z-index:1;position:relative;padding-right:0;padding-left:0;border:0;border-radius:0;font-size:0.9em;background:0 0;box-shadow:none!important;resize:none;width:100%;
+}
+.form-item input:focus, .form-item textarea:focus{outline:0
+}
+.form-item label{display:block;z-index:0;position:relative;top:10em;margin:0;font-size:.85em;line-height:1.5em;vertical-align:middle;vertical-align:baseline;opacity:0;-webkit-transition:top .4s ease,opacity .4s ease;transition:top .4s ease,opacity .4s ease;
+}
+.form-item-filled label{top:0;opacity:1;color:#aaa;
+}
+.form-item-focused label{color:#722872;
+}
+footer{
+  color:#fff;
+  background-color:#aaa;
+  text-align:center;
+  box-shadow:0px 0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+footer h3{margin-bottom:12px;color:#fff;
+}
+#footer-above{padding-top:50px;width:80%;
+}
+#footer-above div{margin-bottom:50px;width:250px;
+}
+#footer-above ul{padding:0;
+}
+#footer-above li{display:inline;
+}
+#footer-below{box-shadow:0px 0px 1px 1px rgba(0, 0, 0, 0.2);padding:1px 0;background-color:#722872;text-align:center;
+}
+.button{
+  color:#fff;
+  border:solid 2px #fff;
+  border-radius:50%;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+  font-size:25px;
+  line-height:40px;
+  -webkit-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+}
+.button:hover{border:solid 2px #fff;color:#722872;background:#fff;
+}
+.scroll-top{
+  z-index:1049;
+  position:fixed;
+  visibility:visible;
+  bottom:2%;right:2%;
+}
+.scroll-top a{background:#722872;
+}
+.scroll-top a:hover, .scroll-top a:focus{color:#722872;background-color:#bbb;border-color:#722872;
+}
+@media(min-width:768px){
+  .scroll-top a{visibility:visible;
+  }
+}
+hr.star-bright, hr.star-dark{margin:40px center 30px;padding:10px;max-width:512px;border:2px;border-top:solid 5px;text-align:center;
+}
+@media(min-width:1023px){
+  header hr.star-bright, header hr.star-dark{margin-right:0;text-align:right;
+  }
+  header hr.star-bright:after, header hr.star-dark:after{right:-10px;
+  }
+}
+hr.star-bright:after, hr.star-dark:after{content:'\f121';font-family:FontAwesome;display:inline-block;position:relative;top:-.8em;padding:0 .25em;font-size:2em;
+}
+hr.star-bright{border-color:#fff;
+}
+hr.star-bright:after{color:#fff;background-color:#aaa;
+}
+hr.star-dark{border-color:#888;
+}
+hr.star-dark:after{color:#888;background-color:#eee;
+}
+.intr-text{
+    max-width:675px;
+    text-align:center;
+    margin-bottom:30px;}
+@media(min-width:1023px){
+  .intr-text{text-align:center;width:610px;
+  }
+}
+}}
+</style>
+
+            <html>
+		      <head>
+                  <title>Hey! You just reached Cite.</title></head>
+		      <body><div style="padding: 80px 580px 80px 550px">
+		      	<iframe
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/003a32b1-28cb-467c-a05f-83f0c5194abf">
+</iframe>
+</div>
+      <footer>
+  <div id="footer-above">
+    <div>
+      <h3>About this page</h3>
+      <p>
+        Made and owned
+        by <a href="https://www.linkedin.com/in/tejas-kotha-224094132/" target="_blank"><br>Tejas Kotha</a>
+      </p>
+    </div>
+    <div>
+      <h3>I AM Everywhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/tejas-kotha-224094132/" target="_blank" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/frenzytejask98" target="_blank" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
+        <li><a href="https://twitter.com/ktejas98" target="_blank" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/ktejas98" target="_blank" class="button social"><i class="fa fa-facebook-f"></i></a></li>
+        <li><a href="https://plus.google.com/u/0/+KTejas" target="_blank" class="button social"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://www.instagram.com/freelo_phoenix/?hl=en" target="_blank" class="button social"><i class="fa fa-instagram"></i></a></l>
+      </ul>
+    </div>
+  </div>
+  <div id="footer-below">TejasKothaInc. ©
+    <script>document.write(new Date().getFullYear())</script>. All Rights Reserved
+  </div>
+</footer>
+</body>
+</html>
